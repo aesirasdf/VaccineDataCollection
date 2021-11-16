@@ -1,0 +1,43 @@
+﻿@model VaccineDataCollection.Models.ClinicalTrial
+
+@{
+    ViewData["Title"] = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>ClinicalTrial</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TrialName)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TrialName)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TrialDesc)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TrialDesc)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.TrialLocation)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.TrialLocation)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.VaccineID)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.VaccineID)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.TrialID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
